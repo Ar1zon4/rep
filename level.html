@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="level.css">
+</head>
+<body>
+    <div class="yo">
+        <div class="bro">
+            <h1>Registration Form</h1>
+            <div class="on">
+                      
+                Name:<input type="text" id="name" onkeyup="sub()">
+                      <p id="call"></p>
+
+                <br> <br> <br>  PhoneNum:<input type="text" id="phone" onkeyup="days()">
+                                 <p id="on"></p>
+      
+                 <br> <br> <br> Address:<input type="text" id="jail" onkeyup="night()">
+                                 <p id="ll"></p>
+
+                 <br> <br> <br> Email: <input type="text" id="hear" onkeyup="holy()">
+                                <h1 id="move"></h1>
+            </div>
+           
+
+
+
+        </div>
+
+        <div class="down">
+
+            <h3></h3>
+            
+            <div class="town">
+                <p>Name: <p id="pp"></p>
+           <br> <p>PhoneNum: <p id="pv"></p>
+            <br> <p>Address:</p><p id="pp"></p>
+            <br> <p>Email:</p><p id="pz"></p>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        function sub(){
+            let part = document.getElementById("pp")
+            let namee = document.getElementById("name")
+            let err = document.getElementById("call")
+
+
+            if (namee.value == "" || namee.value == null || namee.length < 4 ){
+                err.innerHTML = " invalid"
+                
+            }else{
+                part.innerHTML = namee.value
+            }
+           
+            console.log(err)
+        }
+
+        function holy(){
+            let part=document.getElementById("pz")
+            let email=document.getElementById("hear").value
+            let err=""  
+            let validateEmail=''
+
+    
+            if (email== ""){
+            email="input your mail"
+            }
+             else if(email.indexOf('@') != -1 && email.indexOf('.') != -1 && (email.indexOf('gmail') != -1) ){
+             document.getElementById("move").innerHTML=('Valid Email')
+             err="Valid"
+             validateEmail=''
+
+            }else {
+            document.getElementById("move").innerHTML=('Your Email is invalid')
+            err="invaild"
+            validateEmail=''
+            part.innerHTML =email
+             }
+             console.log(err)
+        }
+
+        function days(){
+            let number=document.getElementById("phone")
+            let part = document.getElementById("pv")
+            let error=""
+            let validatePhone=''
+
+            if(phone.value.includes('081') || phone.value.includes('070') || phone.value.includes('091') || phone.value.includes('080') || phone.value.includes("01") && phone.value.length==7 || phone.value.length ==11)  {
+            document.getElementById("on").innerHTML='Valid phone number'
+       
+            }else{
+            document.getElementById("on").innerHTML=' Not Valid phone number'
+            part.innerHTML = number.value
+            }
+
+         
+            
+         function nights(){
+            let address=document.getElementById("jail").value
+            let part = document.getElementById("pp")
+            let error = ""
+            let 
+
+
+            if(address == "" || address == ""){
+                document.getElementById("jail").innerHTML=address
+                address="invaild"
+            }
+         }
+
+        }
+    </script>
+</body>
+</html>
